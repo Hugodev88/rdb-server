@@ -15,6 +15,9 @@ export class User extends Document {
     @Prop({ default: 900 })
     rating: number;
 
+    @Prop({ default: 1 })
+    userType: number;
+
     @Prop({ type: [MongooseSchema.Types.ObjectId], ref: 'Match' })
     matchId: string[];
 
